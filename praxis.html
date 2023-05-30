@@ -1,0 +1,155 @@
+<meta charset="utf8">
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<div id="app">
+    <div v-for="day in days" class="day">
+        <h1>{{day.title}}</h1>
+        <p>{{day.description}}</p>
+    </div>
+</div>
+
+<script>
+
+    let days = `
+
+    Dankeschön Pille
+Für gute Laune zwischendurch
+
+Back up Sicherung
+Historische Sicherung für Back ups – kein Datenverlust mehr
+
+Lange Leitung
+Heute auf der langen Leitung unterwegs ?
+
+eAU
+… und so sieht sie aus – die neue eAU, aktuell nur in Köln benutzt
+
+Leerbuch der Medizin
+Neueste Ausgabe des Universal-Leerbuches der Medizin
+
+Ohrmuschel-Modell
+Neuestes anatomisches Modell der Ohrmuschel – Teil I „Die Muschel“
+
+Schlüssel-Erlebnis
+Finde das passende Schloss dazu
+
+Gedulds-Faden
+… ohne Worte
+
+Fassung verloren
+Der gestrige Geduldsfaden war zu kurz … jmd hat die Fassung verloren
+
+Lebensweisheit
+Was wir von den alten Gelehrten lernen können …
+
+Die Antwort auf alle Fragen des Univerums …
+und aller Patienten: „42“
+
+Knochenbruch
+Gebrochener Knochen des Droiden R2-D2
+
+Das Konsil
+…passiert uns nicht 😊
+
+Pflasterstein
+… ohne Worte
+
+Sinusknoten
+Sick Sinus
+
+Roter Fingerhut – Digitalis purpurea
+Der Fingerhut wird bereits seit dem 18.Jht. medizinisch bei Herzinsuffizienz verwendet.
+
+Ein (paar)  Körnchen Wahrheit
+Zur Ergänzung der Anamnese
+
+IGeL-Leistung
+Mit welcher Ziffer der GOÄ rechnen wir jetzt diese IGeL-Leistung ab ?
+
+Gehhilfe
+Bei Orientierungslosigkeit und Handy- bzw. GPS-Verlust einsetzbar.
+
+Holz vom Stab des Asklepios, Sohn des Apollon und der Koronis
+Wertvolle Reliquie, die nun in der Renchtalpraxis Oppenau aufbewahrt wird.
+
+
+    `
+
+
+    // each day has one or two lines.
+    // the first line is the title
+    // the second line is the description, if there
+    // days are separated by a blank line
+
+    let daysArray = days.split("\n\n")
+
+    let daysObject = daysArray.map(day => {
+        let dayArray = day.split("\n")
+        let title = dayArray[0]
+        let description = dayArray[1]
+        return {title, description}
+    })
+
+    // filter out empty days
+    daysObject = daysObject.filter(day => day.title)
+
+
+    const {createApp} = Vue
+
+    createApp({
+        data() {
+            return {
+                days: daysObject
+            }
+        }
+    }).mount('#app')
+</script>
+
+<style>
+    .day {
+        border: 1px solid black;
+        width: 11cm;
+        display: block;
+        height: 6cm;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        overflow: visible;
+        justify-content: center;
+        padding: 1cm 1cm;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin: 0;
+        padding: 0;
+        /*font-family: "South Park Regular";*/
+        font-family: Futura
+    }
+
+    p {
+        opacity: 0.5;
+    }
+
+    #app {
+        font-family: futura, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        display: flex;
+        flex-wrap: wrap;
+        background: #fffd;
+        gap: .47cm;
+    }
+
+    @font-face {
+        font-family: "South Park Regular";
+        src: url("south park.ttf");
+    }
+
+    body {
+        background-image: url(https://previews.123rf.com/images/maljuki/maljuki1510/maljuki151000045/45985020-nahtlose-linear-schneeflocken-muster-schwarzer-vintage-skizziert-schneeflocken-auf-weißem-hintergrun.jpg);
+        background-size: 450px;
+    }
+
+    body::after {
+
+    }
+</style>
