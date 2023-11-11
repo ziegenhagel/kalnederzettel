@@ -3,8 +3,7 @@
 
 <div id="app">
     <template v-for="(day,index) in days">
-        <div class="day" v-if="index==20" style="filter:grayscale(1);background:url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Gay_Pride_Flag.svg/2880px-Gay_Pride_Flag.svg.png');background-size:100% 100%"></div>
-        <div class="day" v-else>
+        <div class="day">
             <h2 class="date">#{{index+1}}</h2>
             <h1>{{day.title}}</h1>
             <p>{{day.description}}</p>
@@ -14,76 +13,82 @@
 
 <script>
 
-    let days = `Phantomspeisung 🍽
-    Futter zur ausgewogenen Ernährung für Geister und Gespenster.
+let days = `Socken-Safari 🧦
+Finde alle Einzelsocken und bilde neue Paare.
 
-    Altmark-Wasser 🌊
-    Frisches, aus dem Arendsee gefiltertes, mit zarten und milden Mineralien versehenes Heilwasser.
+Teebeutel-Tauchgang 🍵
+Entsorge alte Teebeutel und sortiere die Teebox.
 
-    Geduldsfaden 🧶
-    Emanuels Geduldsfaden (gekürzte Version)
+Stifte-Parade 🖊️
+Teste alle Stifte und entsorge die, die nicht mehr schreiben.
 
-    Knoblauchzehe aus dem 12. Jahrhundert 🧄
-    laut Überlieferung von den ersten asexuellen Menschen angebaut
+Papierkram-Party 📄
+Sichte einen Stapel Post und entsorge Unnötiges.
 
-    Heilige Vorhaut Christi 🫥
-    Unsichtbar - wurde mehrfach geklaut - dann konnte der Diebstahl aber nicht nachgewiesen werden - also ist sie jetzt hier.
+Kabelsalat-Konzert 🎵
+Entwirre ein Kabel und ordne es ordentlich an.
 
-    Wachs-mal-stift 📈
-    Christian Lindners Beitrag zum Freien Markt.
+Gewürzgala 🌶️
+Überprüfe das Gewürzregal auf abgelaufene Gewürze.
 
-    Barsch 🌿
-    Aus Sicht eines Carnivoren, weil Fische sind ja Pflanzen
+Ladekammer-Komödie 📱
+Räume eine Schublade deiner Wahl auf.
 
-    Lebkuchen 🤢
+Bücher-Ballett 📚
+Stelle einige Bücher wieder ordentlich ins Regal.
 
-    Deckel einer Gin-Tonic Flasche 🍸
-    Im Bordbistro eines Zuges entdeckt.
+Foto-Finale 🖼️
+Wähle ein altes Foto aus und finde einen Platz dafür.
 
-    60 Sekunden Schweigegutschein Domi 🤐
-    Kann u.a. während eines Wortwitzes eingesetzt werden. Auch für digitale Kommunikation einlösbar.
+Kissen-Karneval 🛋️
+Schüttele alle Sofakissen aus und richte sie neu.
 
-    Kalorien 🔥
-    Verbrannte Kalorien.
+Tassen-Turnier 🍵
+Räume die Tassen im Schrank ordentlich ein.
 
-    Pfeffer Münz Tee Beutel 🪙
-    Kapitalistisches Erfrischungsgetränk.
+Kühlschrank-Kabarett 🍔
+Wische ein Fach im Kühlschrank sauber.
 
-    Nichts. 😮
-    Sammlung aller Beiträge der CDU zum Klimaschutz
+Spiegel-Spektakel 🪞
+Polier einen Spiegel auf Hochglanz.
 
-    Seltenes DB Hygienetuch 🧻
-    Wurde 2019 in einem Zug gefunden, seitdem in einem Museum ausgestellt.
+Handtuch-Harmonie 🛁
+Falte Handtücher und sortiere sie im Schrank.
 
-    Historische 🎬 Klappenbuch - Seite
-    Überlieferungen frühspätalterlicher Dreharbeiten auf Anfang des 21. Jhd geschätzt, gefunden im südlichen Teil Deutschlands bei Aufräumarbeiten.
+Schuh-Schach 🥿
+Stelle alle Schuhe paarweise ordentlich hin.
 
-    Päckchen Backpulver 🧂
-    Wurde vor langer Zeit zum Backen von Scheinwerfer- und Vorschalterkuchen verwendet.
+Lampen-Lyrik 💡
+Entstaube eine Lampe deiner Wahl.
 
-    Staubfussel vom 17.05.2020 🧹
-    An diesem Nachmittag hattet ihr bei euer Wohnung ein winzigen fleck nicht vollständig geputzt
+Pflanzen-Pantomime 🌱
+Gieße die Zimmerpflanzen und entferne welke Blätter.
 
-    Zucker aus der DB Lounge Düsseldorf 🍬
-    Stammt noch aus der Zeit als es in Düsseldorf eine intakte DB Lounge gab.
+Schmuck-Schelmenstück 💍
+Räume deine Schmuckschatulle auf.
 
-    Stückchen Poly 🧵
-    Gefunden auf dem Dach eines besetzten Hauses in Lützerath.
+Münz-Metamorphose 💰
+Sammle herumliegendes Kleingeld in ein Sparschwein.
 
-    Erster Druck einer Pride Flag ️‍🌈
-    Damals gab es allerdings noch kein Farbdruck
+Teller-Tango 🍽️
+Stelle alle Teller im Schrank gerade.
 
-    * Diese Tüte fehlt
+Kosmetik-Komödie 💄
+Sortiere ausgelaufene oder alte Kosmetikprodukte aus.
 
-    Tüte
-    hab ich gefunden
+Schreibwaren-Sinfonie ✏️
+Sortiere Schreibwaren und lege sie an ihren Platz.
 
-    Biologisches Haarfärbemittel 🧪
-    Von Donal Trump benutzt, um seine Haare in seinem charakteristischen Gelb zu färben.
+Gadget-Gigue 🎮
+Räume elektronische Geräte auf und ordne die zugehörigen Kabel.
 
-    Fahrgastrechte- formular 📝
-    Verstehst Du wenn Du Dein Weihnachtsgeschenk bekommst, Jenny findets bestimmt jetzt schon witzig.
-    `
+Reise-Rhapsodie 🧳
+Leere eine Tasche von der letzten Reise und räume sie weg.
+
+Bettwäsche-Ballade 🛌
+Wechsle die Bettwäsche und lüfte das Bettzeug.
+`
+
 
     // each day has one or two lines.
     // the first line is the title
